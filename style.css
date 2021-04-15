@@ -1,0 +1,112 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 6px 26px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(#e66465, #9198e5);
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  width: 250px;
+  height: 280px;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.inside {
+  width: 200px;
+  height: 250px;
+  color: grey;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+.inside hr {
+  border-width: 1px;
+  border-color: rgba(133, 131, 131, 0.15);
+  margin-bottom: 30px;
+}
+.inside .day {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.inside .date {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.list_div {
+  margin-bottom: 20px;
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: 14fr 1fr;
+  align-items: center;
+  color: grey;
+}
+.list_div #create, .list_div #complete, .list_div #write, .list_div #amaze {
+  width: 15px;
+  height: 15px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  grid-column: 2;
+}
+.list_div label {
+  grid-column: 1;
+  margin-top: -15px;
+  transition: all 0.5s ease-out;
+}
+.list_div svg {
+  position: fixed;
+  margin-left: 185px;
+  margin-top: 3px;
+  stroke: green;
+  stroke-width: 2;
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+  fill: none;
+  z-index: -100;
+  transition: all 0.5s ease-out;
+}
+
+.checkBox {
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+
+.checkBox:checked {
+  opacity: 0;
+  transform: scale(1.5);
+}
+
+.checkBox:checked + label {
+  color: #d7d0d0;
+}
+
+.checkBox:checked ~ svg {
+  stroke-dashoffset: 0;
+  transition: all 0.5s ease-out 0.4s;
+}
